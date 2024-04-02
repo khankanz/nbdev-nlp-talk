@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "nbdev-nlp-talk"
+  site-url: "https://khankanz.github.io/nbdev-nlp-talk"
+  description: "An introductory talk on Large Language Models"
+  repo-branch: main
+  repo-url: "https://github.com/khankanz/nbdev-nlp-talk"
