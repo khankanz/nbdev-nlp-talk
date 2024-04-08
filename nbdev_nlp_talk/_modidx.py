@@ -5,5 +5,4 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://khankanz.github.io',
                 'git_url': 'https://github.com/khankanz/nbdev-nlp-talk',
                 'lib_path': 'nbdev_nlp_talk'},
-  'syms': { 'nbdev_nlp_talk.core': {'nbdev_nlp_talk.core.foo': ('core.html#foo', 'nbdev_nlp_talk/core.py')},
-            'nbdev_nlp_talk.llm_intro': {'nbdev_nlp_talk.llm_intro.foo': ('llm_intro.html#foo', 'nbdev_nlp_talk/llm_intro.py')}}}
+  'syms': {'nbdev_nlp_talk.core': {'nbdev_nlp_talk.core.foo': ('core.html#foo', 'nbdev_nlp_talk/core.py')}, 'nbdev_nlp_talk.llm_intro': {}}}
