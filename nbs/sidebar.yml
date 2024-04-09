@@ -3,3 +3,5 @@ website:
     contents:
       - index.ipynb
       - 00_llm_intro.ipynb
+      - 01_tokenization.ipynb
+      - 02_qawith_llms.ipynb
