@@ -3,14 +3,11 @@
 # %% auto 0
 __all__ = []
 
-# %% ../nbs/00_llm_intro.ipynb 13
+# %% ../nbs/00_llm_intro.ipynb 23
 from IPython.display import display,Image
 
-# %% ../nbs/00_llm_intro.ipynb 14
+# %% ../nbs/00_llm_intro.ipynb 24
 display(Image('assets/tmcrs.png'))
 
-# %% ../nbs/00_llm_intro.ipynb 15
+# %% ../nbs/00_llm_intro.ipynb 25
 display(Image('assets/mry.png'))
-
-# %% ../nbs/00_llm_intro.ipynb 23
-display(Image('assets/leaderboard.png'))
