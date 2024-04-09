@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "llm_intro.html",
+    "href": "llm_intro.html",
+    "title": "What is a Large Language Model?",
+    "section": "",
+    "text": "is something that knows how to predict the next word of a sentence. Or knows how to fill missing words of a sentence. Subword units, pieces of a word",
+    "crumbs": [
+      "What is a Large Language Model?"
+    ]
+  },
+  {
+    "objectID": "llm_intro.html#the-magic-is-in-the-parameters.",
+    "href": "llm_intro.html#the-magic-is-in-the-parameters.",
+    "title": "What is a Large Language Model?",
+    "section": "The magic is in the parameters.",
+    "text": "The magic is in the parameters.\nCan be thought up as a compression on a good chunk of the internet. 10TB of text from the internet -&gt; GPE cluster 6,000 for 12 days ~$2M it is compressing this large chunk of text and putting it into this 140GB file where the compression rate is ~100x. However, this is a lot less like zip because this is not a loss less compression. What’s happening here is a loss compression, we don’t have an ideal copy of the data. These numbers by today’s standard are rookie numbers. You can think of today’s numbers as 10x.",
+    "crumbs": [
+      "What is a Large Language Model?"
+    ]
+  },
+  {
+    "objectID": "llm_intro.html#what-is-this-neural-network-doing",
+    "href": "llm_intro.html#what-is-this-neural-network-doing",
+    "title": "What is a Large Language Model?",
+    "section": "What is this neural network doing?",
+    "text": "What is this neural network doing?\nIt’s just trying to predict the next word in a sequence. You can feed it a sequence of words i.e. cat sat on a... and out comes a prediction of the next word i.e. mat &gt; You can show mathematically that there’s a very close relationship between prediction and compression.\n\nThis statement refers to the idea that both prediction and compression involve recognizing and exploting patterns in data. Prediction, in the context of LLMs, is about forecasting the next piece of information based on that data it has seen. Compression, on the other hand, is about representing data in a more compact form without losing the original information.\nIF a model predicts well, it implies that it understands the patterns in the data. The same understanding of patterns allows for effective compression because the model can use shorthand or symbols to represent frequently occurring data sequences instead of full data. Thus a model that is good at predictin is also inherently good at compression, as both tasks leverage the model’s ability to discern and utilize patterns in the data. Shannon’s Entropy measures the amount of unpredictability or informaton content in a data source, which directly relates to how well data can be compressed.\n\nThe next word prediction is a very powerful objective, because it forces you to learn about world inside the parameters of the neural network.\nThe network ‘dreams’ internet documents. The model generates what comes next, we sample from the model, i.e. we pick a word, and we continue to feed back in to get the next word and continue feeding that back in.\nFor example, we get webpage dreams. IT’s dreaming text from the distrobution it was trained on. It’s mimicing these documents..",
+    "crumbs": [
+      "What is a Large Language Model?"
+    ]
+  },
+  {
+    "objectID": "llm_intro.html#how-does-it-work",
+    "href": "llm_intro.html#how-does-it-work",
+    "title": "What is a Large Language Model?",
+    "section": "How does it work?",
+    "text": "How does it work?\nTransformer neural network architecture; we understand in full detail this architecture. 100 billion parameters. Little is known in full detail: billions of parameters are dispersed through the network, we know how to iteratively adjust them to make it better at prediction, we can measure that this works but we don’t really know how the billions of parameters collaborate to do it.\nWe know how to iteratively adjust the parameters to make it better at the next work prediction task BUT we don’t know what these parameters collaborate.\nWe understand that model’s maintain some sort of knowledge database but this knowledge database is very strange and imperfect. The reversal curse as an example if you ask GPT4 about Tom Cruise’s mother..This knowledge is weird and sort of 1-dimensional. This knowledge isn’t stored and can be accessed in all sorts of ways. You have to ask it from a specific sort of direction almost.\nThis of LLMs as mostly instrutable artifacts, there not something you’d build in an engineering discipline, they’re not like a car. Where you understand all the parts. They come from this long process of optimization. We don’t currently know exactly how they word. There’s a field call mechanistic interprebility taht tries to go in and figure out all the parts of what the neural network is doing. We can measure the text they generate.",
+    "crumbs": [
+      "What is a Large Language Model?"
+    ]
+  },
+  {
+    "objectID": "llm_intro.html#how-do-you-go-past-pre-training-and-train-an-assistant",
+    "href": "llm_intro.html#how-do-you-go-past-pre-training-and-train-an-assistant",
+    "title": "What is a Large Language Model?",
+    "section": "How do you go past pre-training and train an Assistant?",
+    "text": "How do you go past pre-training and train an Assistant?\nYou obtain an assistant model. We want to give questions and generate answers. We basically keep the optimization identical, we swap out hte dataset from internet documents to datasets we collect manually and we collect them by using lots of people. A company will hire people, give them labelling instructions and ask people to come up with questiosn and write answers for them. Pretraining is a large quantity of text and this second stage, we prefer quality over quantity 100k. All conversations taht are high quality. We swap out the dataset, we train on these Q/A documents. Once you finetune an assistant, the model knows that it should reply in the style of an assistant…\nFinetuning stage is about alignment. It’s about changing the formating from internet documents to question documents in a helpful assistant manner.\n(optional stage3 of finetuning) It’s much easier to compare candidate answers than write them. We can use this to further, this is RLHF.",
+    "crumbs": [
+      "What is a Large Language Model?"
+    ]
+  },
+  {
+    "objectID": "llm_intro.html#elo",
+    "href": "llm_intro.html#elo",
+    "title": "What is a Large Language Model?",
+    "section": "ELO:",
+    "text": "ELO:\nThis is a chatbot arena. They rank the different language models by their ELO rating. The way you calculate the ELO is very similar to how to calculate in chess. Different chess players, play each other, depending on the win rates against each other you can rank to ELO rating. You go to the website, you generate a question, you pick the winner, depending on who wins or loses, you pick the winner. We see that closed models work better..\nhttps://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard",
+    "crumbs": [
+      "What is a Large Language Model?"
+    ]
+  },
+  {
+    "objectID": "llm_intro.html#llm-scaling-laws",
+    "href": "llm_intro.html#llm-scaling-laws",
+    "title": "What is a Large Language Model?",
+    "section": "LLM Scaling Laws:",
+    "text": "LLM Scaling Laws:\nThe first very important thing to understand about large language models space are what we call scaling laws. It turns out that hte performance in terms of the accuracy of the next word prediction task is a remarkably smooth and well behaved function of two variables 1) N - the number of parameters 2) D - the amount of text taht you’re going to train on\nGiven these two variables, we can estimate with remarkable accuracy how well you’re going to perform on your next word prediction task. These tends do not show signs of topping out. Bigger model on more text is teh direction of progress. Algorithmic progress is not necassary - it’s a bonus. Get a bigger computer, and train a bigger model for longer.\nIn practice however, we don’t necessarily care about next word prediction accuracy BUT imperically, this prediction accuracy is correlated to a lot of evaluations taht we do care about. This is what’s leading to the gold rush in larger GPU clusters.\n\nReference(s):\nIntroduction to LLMs by Andrej Karpathy https://www.youtube.com/watch?v=zjkBMFhNj_g&t=2525s",
+    "crumbs": [
+      "What is a Large Language Model?"
+    ]
+  },
+  {
+    "objectID": "tokenization.html",
+    "href": "tokenization.html",
+    "title": "Tokenization",
+    "section": "",
+    "text": "text = \"\"\"\nBILATERAL MAMMOGRAM\n\nHISTORY:  65 year old female.  breast ca.  Right lumpectomy 2030.  Surveillance.\n\nFilms were compared with previous.\n\nFINDINGS:  The breast tissue is heterogeneously dense.  There is no focal mass, suspicious calcification, or architectural distortion concerning for malignancy. Stable right breast post treatment changes.\nIMPRESSION:  No mammographic evidence of malignancy.  Routine follow-up is recommended.\n\nBIRADS 2\n\"\"\"",
+    "crumbs": [
+      "Tokenization"
+    ]
+  },
+  {
+    "objectID": "tokenization.html#tokenization",
+    "href": "tokenization.html#tokenization",
+    "title": "Tokenization",
+    "section": "TOKENIZATION:",
+    "text": "TOKENIZATION:\nA lot of oddness with LLMs typically traces back to tokenization. What is tokenization? A lot of issues with that may look like they’re stemming from the neural network and the large language model itself are actualy issues with the tokenizations\nIf you’ve noticed that LLMs can’t do spelling tasks very easily? That’s usually due to tokenization These characters are chunked up into tokens and some of these tokens are fairly long.. Simple string processing tasks like reversing a string? tokenization Non-english languages can work much worse and due to a large extent this is due to tokenization Sometimes llms are bad at simple arithmetic? tokenization Why did GPT-2 have more trouble with Python was due to tokenization\nYou can see breast density became 3 tokens [21152, 561, 17915] where as . breast density gets broken down into 2 tokens [17659, 17915] . Note that space + word is a token.\nThe word breast is fed as a single chunk into the LLM. It’s pretty arbritary. It is case sensitive. So the same concept breast depending on if its at the beginning of a sentence, end of sentence, lower-upper case it has different corresponding ids. The LLM has to learn that these are all the same concepts and group them in the parameters. and learn that these are similar but not exactly the same.\nIf we use a lot more tokens to represent the same thing, it bloats up the sequence length of all the documents and in the attention of the transformer when these tokens try to attend to each other you are running out of context in the max context length of that transformer. We’re being way too wastful and taking up too much token space.\nCLK is 100k tokens vs the 50k tokens from gpt2. We went from ~ 116 to ~100. Now you can imagine this is a good thing because the same text is squished into less tokens. This is a more dense representation for the transformer. We can see more text for context as to what to produce next. BUT ofcourse just increasing the number of tokens in the vocab is not strictly better because now you’re embedding table is sort of getting a lot larger and at the output token you have your softmax there and that grows as well. There’s a sweet spot somewhere where everything is appropriately dense..A lot of the improvement is the design of the tokenizer and how it groups the tokens.\n\nsent_tokenize(text)\n\n['\\nBILATERAL MAMMOGRAM\\n\\nHISTORY:  65 year old female.',\n 'breast ca.',\n 'Right lumpectomy 2030.',\n 'Surveillance.',\n 'Films were compared with previous.',\n 'FINDINGS:  The breast tissue is heterogeneously dense.',\n 'There is no focal mass, suspicious calcification, or architectural distortion concerning for malignancy.',\n 'Stable right breast post treatment changes.',\n 'IMPRESSION:  No mammographic evidence of malignancy.',\n 'Routine follow-up is recommended.',\n 'BIRADS 2']",
+    "crumbs": [
+      "Tokenization"
+    ]
+  },
+  {
+    "objectID": "tokenization.html#tokens",
+    "href": "tokenization.html#tokens",
+    "title": "Tokenization",
+    "section": "Tokens",
+    "text": "Tokens\n\nfrom tiktoken import encoding_for_model\nenc = encoding_for_model('text-davinci-003')\ntoks = enc.encode(text)\nsub = toks[:30]\nsub\n\n[198,\n 19676,\n 23261,\n 1847,\n 337,\n 2390,\n 44,\n 7730,\n 24115,\n 198,\n 198,\n 39,\n 42480,\n 25,\n 220,\n 6135,\n 614,\n 1468,\n 4048,\n 13,\n 220,\n 9296,\n 1275,\n 13,\n 220,\n 6498,\n 46390,\n 806,\n 9145,\n 25054]\n\n\n\n[enc.decode_single_token_bytes(o).decode('utf-8') for o in sub]\n\n['\\n',\n 'BIL',\n 'ATER',\n 'AL',\n ' M',\n 'AM',\n 'M',\n 'OG',\n 'RAM',\n '\\n',\n '\\n',\n 'H',\n 'ISTORY',\n ':',\n ' ',\n ' 65',\n ' year',\n ' old',\n ' female',\n '.',\n ' ',\n ' breast',\n ' ca',\n '.',\n ' ',\n ' Right',\n ' lum',\n 'pect',\n 'omy',\n ' 2030']",
+    "crumbs": [
+      "Tokenization"
+    ]
+  },
+  {
+    "objectID": "tokenization.html#references",
+    "href": "tokenization.html#references",
+    "title": "Tokenization",
+    "section": "References:",
+    "text": "References:\n\nLet’s build GPT Tokenizer by Andrej Karpathy https://www.youtube.com/watch?v=zduSFxRajkE&t=7051s",
+    "crumbs": [
+      "Tokenization"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev-nlp-talk",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "nbdev-nlp-talk"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nbdev-nlp-talk",
+    "section": "Install",
+    "text": "Install\npip install nbdev_nlp_talk",
+    "crumbs": [
+      "nbdev-nlp-talk"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nbdev-nlp-talk",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "nbdev-nlp-talk"
+    ]
+  }
+]
